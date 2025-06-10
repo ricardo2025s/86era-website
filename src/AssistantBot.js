@@ -57,16 +57,14 @@ const AssistantBot = () => {
     setChat(updatedChat);
     setInput("");
     if (nextStep < steps.length) setStep(nextStep);
-  };
-
-  return (
+  };  return (
     <div className="max-w-md mx-auto bg-white shadow-xl rounded-2xl p-4 h-screen flex flex-col">
       <h1 className="text-xl font-bold mb-2">86ERA Assistant</h1>
       <div className="flex-1 overflow-y-auto space-y-2">
         {chat.map((msg, index) => (
           <div
             key={index}
-            className={\`p-2 rounded-xl w-fit max-w-[90%] \${msg.from === "bot" ? "bg-blue-100 text-black" : "bg-black text-white self-end"}\`}
+            className={`p-2 rounded-xl w-fit max-w-[90%] ${msg.from === "bot" ? "bg-blue-100 text-black" : "bg-black text-white self-end"}`}
           >
             {msg.text}
           </div>
