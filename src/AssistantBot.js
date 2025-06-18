@@ -70,14 +70,26 @@ const AssistantBot = () => {
     if (step < steps.length - 1) setStep(step + 1);
   };
 
-  return (
+  return ( 
+<>
+<img src="/logo.png" alt="86ERA Logo" className="w-40 mx-auto mb-6 animate-pulse drop-shadow-xl" />
+
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="bg-white shadow-xl rounded-2xl max-w-xl w-full p-6 space-y-4">
         <h1 className="text-2xl font-bold text-center text-gray-800">86ERA Assistant</h1>
         <div className="flex-1 overflow-y-auto space-y-2 max-h-[400px]">
           {chat.map((msg, index) => (
             <div
-              key={index}
+              key={index}>
+              {msg.text}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </>
+);
+
               className={`p-2 rounded-xl w-fit max-w-[90%] ${
                 msg.from === "bot"
                   ? "bg-blue-100 text-black"
