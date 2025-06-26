@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #000428, #004e92);
+  }
+  
+  .drop-shadow {
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+  }
+  
+  .btn {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  }
+  
